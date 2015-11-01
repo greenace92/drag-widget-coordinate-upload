@@ -1,6 +1,6 @@
 # drag-widget-coordinate-upload
 
-A wording demo can be found here: soqui.us/jdcc/projects/widget-drag-upload-coordinate
+A wording demo can be found here: http://ambigy.com/account.php
 
 Draggable widget through jQuery with auto-upload of coordinates for later recall and positioning of widget
 
