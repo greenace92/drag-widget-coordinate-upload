@@ -15,16 +15,16 @@ $stmt->bind_param('s',$user);
 if($stmt->execute()) {
   $stmt->bind_result($wmoved_from_db);
   if($stmt->fetch()) {
-    if ($wmoved_from_db!="yes"){
-      $yes = "yes";
-      $link = new mysqli("$servername", "$username", "$password", "$dbname");
+    if ($wmoved_from_db != "yes"){
+      $yes   = "yes";
+      $link  = new mysqli("$servername", "$username", "$password", "$dbname");
       $stmt2 = mysqli_prepare($link, "UPDATE users SET wmoved = ? WHERE name = ?");
       $stmt2->bind_param('ss',$yes,$user);
       $stmt2->execute();
     }
   }
 }
-if($_SERVER['REQUEST_METHOD']=='POST'){
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
   // get data
   $id    = $_POST['id'];
   $name  = $_POST['name'];
@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $row = null;
     $stmt->bind_result($row);
     while ($stmt->fetch()) {
-      if($row==0) {
+      if($row == 0) {
         // no widgets found
         // create new entry
         $link = new mysqli("$servername", "$username", "$password", "$dbname");
