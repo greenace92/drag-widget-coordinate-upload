@@ -26,14 +26,14 @@ if($stmt->execute()) {
 }
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
   // get data
-  $id    = $_POST['id'];
-  $name  = $_POST['name'];
-  $wname = $_POST['wname'];
-  $xcor  = $_POST['xcor'];
-  $ycor  = $_POST['ycor'];
-  $xwid  = $_POST['xwid'];
-  $yhei  = $_POST['yhei'];
-  $photo = $_POST['photo'];
+  $id        = $_POST['id'];
+  $name      = $_POST['name'];
+  $wname     = $_POST['wname'];
+  $xcor      = $_POST['xcor'];
+  $ycor      = $_POST['ycor'];
+  $xwid      = $_POST['xwid'];
+  $yhei      = $_POST['yhei'];
+  $photo     = $_POST['photo'];
   $targeturl = $_POST['targeturl'];
   // checking to see if user has any widgets in widget table
   $link = new mysqli("$servername", "$username", "$password", "$dbname");
